@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes Sharing Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Authentication Modal -->
+    <div id="authModal" class="modal">
+        <div class="modal-content">
+            <h2>Enter Your Name</h2>
+            <input type="text" id="usernameInput" placeholder="Your Name">
+            <button onclick="authenticateUser()">Submit</button>
+        </div>
+    </div>
+
+    <!-- Main Content of the Website (Subject Cards, Sidebar, etc.) -->
+    <div id="mainContent" style="display:none;">
+        <div class="hamburger" onclick="toggleSidebar()">
+            &#9776; <!-- Hamburger icon -->
+        </div>
+        <div class="sidebar" id="sidebar">
+            <div class="profile-section">
+                <img src="images/profile.jpg" alt="Profile" class="profile-pic">
+                <h3 id="userNameDisplay">Guest</h3>
+                <p class="status">Online</p>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="https://www.linkedin.com/in/krishnagopaljha/">Developer's About</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </div>
+
+        <div class="dashboard">
+            <h1>Information Security Management: Class Test</h1>
+            <div class="subject-info">
+                <div class="subject-card">
+                    <img src="images/one.png" alt="Subject 1">
+                    <h2><a href="vapt_assign.html">Class Test - 1</a></h2>
+                </div>
+                <div class="subject-card">
+                    <img src="images/two.png" alt="Subject 2">
+                    <h2><a href="vapt_present.html">Class Test - 2</a></h2>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

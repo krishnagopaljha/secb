@@ -1,0 +1,89 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+/* General reset for better cross-browser consistency */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212; /* Dark background for a sleek look */
+    color: #e0e0e0; /* Light text for contrast */
+    line-height: 1.7;
+}
+
+/* Home button styling */
+.home-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #1e1e1e;
+    color: #78c2ff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.home-button:hover {
+    background-color: #333;
+    transform: scale(1.1);
+}
+
+/* Main container styling */
+.container {
+    margin: 100px auto; /* Added margin to accommodate home button */
+    max-width: 600px; /* Centered with a max width */
+    padding: 20px;
+    background-color: #1f1f1f; /* Card background */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Strong shadow for depth */
+}
+
+.container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #e0e0e0;
+}
+
+/* Notes list styling */
+.notes-list {
+    list-style-type: none; /* No bullets */
+}
+
+.notes-list li {
+    margin-bottom: 15px; /* Spacing between items */
+}
+
+.notes-list a {
+    text-decoration: none; /* Remove underline */
+    color: #4ab0f0; /* Link color */
+    padding: 10px;
+    display: block; /* Block display for easy clicking */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+.notes-list a:hover {
+    background-color: #333; /* Darker background on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px; /* Adjusted padding for smaller screens */
+        margin: 80px 10px; /* Slightly smaller margins on the sides */
+    }
+}

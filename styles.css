@@ -1,0 +1,270 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+/* General reset for better cross-browser consistency */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212; /* Dark background for a sleek look */
+    color: #e0e0e0; /* Light text for contrast */
+    line-height: 1.7;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 12px;
+    background-color: #1f1f1f; /* Subtle background */
+    border: none;
+    color: #78c2ff; /* Light blue for visibility */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.hamburger:hover {
+    background-color: #3c3c3c; /* Darker grey on hover */
+}
+
+/* Sidebar Styling */
+.sidebar {
+    background-color: #1e1e1e; /* Dark sidebar */
+    color: #ffffff; /* White text */
+    width: 260px; /* Fixed width for consistency */
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 2px 0 15px rgba(0, 0, 0, 0.5); /* Strong shadow for depth */
+}
+
+.profile-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.profile-pic {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    border: 3px solid #78c2ff; /* Blue border for profile picture */
+}
+
+.profile-section h3 {
+    font-size: 20px; /* Larger font size */
+    font-weight: 600;
+    text-transform: uppercase; /* Stylish uppercase */
+}
+
+.status {
+    font-size: 14px; /* Smaller font for status */
+    color: #76ff03; /* Bright green for status indication */
+}
+
+.nav-links {
+    list-style: none;
+    width: 100%;
+    padding: 0;
+}
+
+.nav-links li {
+    width: 100%;
+}
+
+.nav-links a {
+    display: block;
+    padding: 15px 25px; /* Generous padding */
+    color: #e0e0e0; /* Light text */
+    text-decoration: none; /* Remove the underline */
+    font-size: 17px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition */
+}
+
+.nav-links a:hover {
+    background-color: #2e2e2e; /* Darker grey for hover effect */
+    transform: translateX(5px); /* Slide effect on hover */
+}
+
+.nav-links a:active, .nav-links a:focus {
+    background-color: #3f3f3f; /* Different active color */
+}
+
+/* Main Dashboard */
+.dashboard {
+    margin-left: 260px; /* Align with sidebar width */
+    padding: 40px;
+}
+
+.subject-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Flexible card sizes */
+    gap: 30px; /* Ample spacing */
+}
+
+.subject-card {
+    background-color: #1f1f1f; /* Dark background for cards */
+    color: #ffffff; /* White text */
+    border-radius: 10px; /* Subtle rounded corners */
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Strong shadow */
+}
+
+.subject-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+}
+
+.subject-card img {
+    width: 100%;
+    height: 160px; /* Fixed height */
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease; /* Smooth image transition */
+}
+
+.subject-card img:hover {
+    transform: scale(1.1); /* Zoom effect on image hover */
+}
+
+.subject-card h2 {
+    font-size: 22px; /* Moderate heading size */
+    font-weight: 600;
+    padding: 15px;
+    background-color: #2a2a2a; /* Slightly lighter background for title */
+    border-top: 5px solid #78c2ff; /* Accent border for title */
+}
+
+/* Subject Card Links */
+.subject-info a {
+    color: #e0e0e0; /* Light color for the text */
+    text-decoration: none; /* Remove the underline */
+    font-size: 18px; /* Slightly larger font size */
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+.subject-info a:hover {
+    color: #78c2ff; /* Light blue color on hover for emphasis */
+}
+
+/* Authentication Modal Styling */
+.modal {
+    display: block; /* Show the modal initially */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark overlay */
+}
+
+.modal-content {
+    background-color: #212121; /* Dark modal background */
+    padding: 30px; /* Ample padding */
+    margin: 10% auto;
+    border-radius: 10px; /* Rounded corners */
+    width: 360px; /* Fixed width */
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Strong shadow for depth */
+}
+
+.modal-content h2 {
+    font-size: 24px; /* Larger heading */
+    margin-bottom: 15px; /* Adequate spacing */
+    color: #78c2ff; /* Accent color for the heading */
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 12px; /* Clean padding */
+    margin-bottom: 20px; /* Spacing below input */
+    font-size: 16px;
+    border-radius: 5px; /* Rounded corners */
+    border: 1px solid #555; /* Darker border */
+    background-color: #323232; /* Dark input background */
+    color: #ffffff; /* White text */
+}
+
+.modal-content input::placeholder {
+    color: #aaaaaa; /* Placeholder color */
+}
+
+.modal-content button {
+    padding: 12px 25px; /* Clean button size */
+    background-color: #78c2ff; /* Bright button color */
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition */
+}
+
+.modal-content button:hover {
+    background-color: #5a9bd3; /* Darker blue on hover */
+    transform: scale(1.05); /* Slight scale effect */
+}
+
+/* Hide the main content initially */
+#mainContent {
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .subject-info {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* Responsive grid */
+    }
+
+    .hamburger {
+        display: block; /* Show the hamburger menu on mobile */
+    }
+
+    .sidebar {
+        left: -260px; /* Hide sidebar */
+        transition: left 0.3s ease;
+    }
+    
+    .sidebar.open {
+        left: 0; /* Show sidebar when open */
+    }
+
+    .dashboard {
+        margin-left: 0; /* Full width dashboard */
+        padding: 20px; /* Adjusted padding */
+    }
+}
+
+@media (max-width: 500px) {
+    .subject-info {
+        grid-template-columns: 1fr; /* Single column layout on small screens */
+    }
+
+    .dashboard, .subject-page {
+        padding: 15px; /* Reduced padding */
+    }
+
+    .sidebar {
+        width: 200px; /* Responsive sidebar width */
+    }
+
+    .nav-links a {
+        font-size: 14px; /* Smaller font size */
+        padding: 12px 15px; /* Adjusted padding */
+    }
+}
